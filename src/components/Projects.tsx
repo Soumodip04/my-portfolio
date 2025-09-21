@@ -27,7 +27,15 @@ const projects: Project[] = [
       'Real-time Mental Health Analytics and insights',
       'Privacy-by-Design with HIPAA compliance'
     ],
-    challenges: 'Building culturally sensitive AI therapy across 20+ languages while ensuring crisis safety, maintaining therapeutic efficacy, and providing real-time intervention capabilities for global accessibility.',
+    challenges: `• Developing culturally sensitive AI therapy models that adapt responses across 20+ languages while maintaining therapeutic efficacy
+
+• Implementing real-time crisis detection algorithms with immediate intervention capabilities including professional handoffs
+
+• Building scalable multilingual NLP systems with context-aware emotional analysis
+
+• Ensuring HIPAA compliance and privacy-by-design architecture while maintaining global accessibility
+
+• Creating region-specific emergency integration with local mental health services and crisis hotlines`,
     github: 'https://github.com/Soumodip04/MindScope',
     demo: 'https://mind-scope-gold.vercel.app',
     liveUrl: 'https://mind-scope-gold.vercel.app',
@@ -48,7 +56,15 @@ const projects: Project[] = [
       'Citation and fact-checking',
       'Enterprise-ready deployment'
     ],
-    challenges: 'Balancing accuracy with speed while ensuring data privacy and implementing effective document chunking strategies for optimal retrieval.',
+    challenges: `• Optimizing document chunking algorithms for semantic coherence while maintaining retrieval speed
+
+• Implementing secure document processing pipelines with enterprise-grade privacy controls
+
+• Balancing LLM response accuracy with query latency under high concurrent loads
+
+• Developing domain-adaptive citation systems that provide precise source attribution
+
+• Creating robust fact-checking mechanisms to prevent hallucinations in critical use cases`,
     github: 'https://github.com/Soumodip04/rag-expert-system',
     demo: 'https://rag-demo.com',
     liveUrl: 'https://rag-demo.com',
@@ -70,7 +86,15 @@ const projects: Project[] = [
       'SEO friendly with structured data',
       'Smooth animations with Framer Motion'
     ],
-    challenges: 'Creating a modern portfolio with enterprise-grade features while maintaining excellent performance and user experience across all devices.',
+    challenges: `• Achieving sub-200ms page load times with complex animations and PWA capabilities
+
+• Implementing sophisticated dark mode with seamless theme persistence across sessions
+
+• Building responsive layouts that perform consistently across all device sizes and orientations
+
+• Optimizing Framer Motion animations for 60fps performance while maintaining visual appeal
+
+• Ensuring accessibility compliance (WCAG 2.1) while preserving modern design aesthetics`,
     github: 'https://github.com/Soumodip04',
     demo: 'https://soumodip-portfolio.vercel.app',
     liveUrl: 'https://soumodip-portfolio.vercel.app',
