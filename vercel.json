@@ -8,7 +8,7 @@
       "maxDuration": 10
     }
   },
-  "regions": ["bom1", "sin1"],
+  "regions": ["bom1"],
   "env": {
     "NODE_ENV": "production"
   }
