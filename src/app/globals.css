@@ -1,0 +1,439 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: 109, 40, 217;
+  --secondary-color: 236, 72, 153;
+  --accent-color: 124, 58, 237;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 248, 250, 252;
+  --foreground-rgb: 15, 23, 42;
+  --card-bg: 255, 255, 255;
+  --border-color: 226, 232, 240;
+  --text-primary: 15, 23, 42;
+  --text-secondary: 71, 85, 105;
+  --text-muted: 100, 116, 139;
+}
+
+.dark {
+  --primary-color: 139, 92, 246;
+  --secondary-color: 244, 114, 182;
+  --accent-color: 167, 139, 250;
+  --background-start-rgb: 15, 23, 42;
+  --background-end-rgb: 30, 41, 59;
+  --foreground-rgb: 248, 250, 252;
+  --card-bg: 30, 41, 59;
+  --border-color: 51, 65, 85;
+  --text-primary: 248, 250, 252;
+  --text-secondary: 203, 213, 225;
+  --text-muted: 148, 163, 184;
+}
+
+/* Remove conflicting media query that overrides our custom variables */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(135deg, rgb(var(--background-start-rgb)) 0%, rgb(var(--background-end-rgb)) 100%);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* Section spacing */
+section {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
+/* Custom Animations */
+@keyframes gradient-xy {
+  0%, 100% {
+    background-size: 400% 400%;
+    background-position: left top;
+  }
+  25% {
+    background-size: 400% 400%;
+    background-position: right top;
+  }
+  50% {
+    background-size: 400% 400%;
+    background-position: right bottom;
+  }
+  75% {
+    background-size: 400% 400%;
+    background-position: left bottom;
+  }
+}
+
+.animate-gradient-xy {
+  animation: gradient-xy 15s ease infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Hero Background Blob Animations */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -50px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(-10px, -20px) scale(1.05);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--background-start-rgb));
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6d28d9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5b21b6;
+}
+
+/* Missing CSS Classes */
+.section-heading {
+  @apply text-4xl md:text-5xl font-bold text-center;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent;
+}
+
+.timeline-item {
+  @apply relative;
+}
+
+.experience-card {
+  @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700;
+}
+
+/* Enhanced card styles */
+.project-card {
+  @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700;
+}
+
+.skill-card {
+  @apply bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700;
+}
+
+/* Button improvements */
+.btn-primary {
+  @apply bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply border-2 border-purple-500 text-purple-600 dark:text-purple-400 hover:bg-purple-500 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300;
+}
+
+/* Enhanced animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.6s ease-out forwards;
+}
+
+/* Enhanced Dark Mode Styles */
+.dark .navbar-bg {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.navbar-bg {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.dark .card-bg {
+  background: rgb(var(--card-bg));
+  border: 1px solid rgb(var(--border-color));
+}
+
+.light .card-bg, .card-bg {
+  background: rgb(var(--card-bg));
+  border: 1px solid rgb(var(--border-color));
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Theme toggle button enhancement */
+.theme-toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgb(var(--border-color));
+  background: rgb(var(--card-bg));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:hover {
+  border-color: rgb(var(--primary-color));
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+/* Enhanced text contrast */
+.text-primary {
+  color: rgb(var(--text-primary));
+}
+
+.text-secondary {
+  color: rgb(var(--text-secondary));
+}
+
+.text-muted {
+  color: rgb(var(--text-muted));
+}
+
+/* Section backgrounds with better contrast */
+.section-bg-light {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 1) 0%, 
+    rgba(248, 250, 252, 1) 50%, 
+    rgba(241, 245, 249, 1) 100%);
+}
+
+.section-bg-light-alt {
+  background: linear-gradient(135deg, 
+    rgba(248, 250, 252, 1) 0%, 
+    rgba(255, 255, 255, 1) 50%, 
+    rgba(248, 250, 252, 1) 100%);
+}
+
+.section-bg-dark {
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 1) 0%, 
+    rgba(30, 41, 59, 1) 50%, 
+    rgba(15, 23, 42, 1) 100%);
+}
+
+.section-bg-dark-alt {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 1) 0%, 
+    rgba(15, 23, 42, 1) 50%, 
+    rgba(30, 41, 59, 1) 100%);
+}
+
+/* Gradient backgrounds for sections */
+.section-gradient-light {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(249, 250, 251, 0.1) 100%);
+}
+
+.section-gradient-dark {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.1) 0%, rgba(30, 41, 59, 0.1) 100%);
+}
+
+/* Smooth transitions for all theme changes */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .container {
+    @apply px-4;
+  }
+  
+  section {
+    @apply py-16;
+  }
+  
+  .section-heading {
+    @apply text-3xl md:text-4xl;
+  }
+}
+
+/* Focus states for accessibility */
+*:focus {
+  @apply outline-none ring-2 ring-purple-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900;
+}
+
+/* Improved button focus states */
+.btn-primary:focus,
+.btn-secondary:focus,
+.theme-toggle:focus {
+  @apply ring-2 ring-purple-500 ring-offset-2;
+}
+
+/* Enhanced scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improved selection colors */
+::selection {
+  @apply bg-purple-200 text-purple-900;
+}
+
+.dark ::selection {
+  @apply bg-purple-800 text-purple-100;
+}
+
+/* Loading states */
+.loading {
+  @apply animate-pulse;
+}
+
+/* Enhanced hover states for cards */
+.card:hover {
+  @apply shadow-2xl scale-105;
+}
+
+.project-card:hover {
+  @apply shadow-2xl scale-105 border-purple-200 dark:border-purple-700;
+}
+
+/* Improved text contrast */
+.text-muted {
+  @apply text-gray-600 dark:text-gray-300;
+}
+
+.text-muted-more {
+  @apply text-gray-500 dark:text-gray-400;
+}
+
+/* Custom animation utilities for enhanced CTA */
+@keyframes shine {
+  0% { transform: translateX(-100%) skewX(-12deg); }
+  100% { transform: translateX(200%) skewX(-12deg); }
+}
+
+.animate-shine {
+  animation: shine 2s ease-in-out infinite;
+}
+
+/* Custom animation delays */
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animate-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animate-delay-700 {
+  animation-delay: 700ms;
+}
+
+/* Enhanced button hover effects */
+.btn-enhanced:hover {
+  @apply scale-110 -translate-y-3 shadow-2xl;
+}

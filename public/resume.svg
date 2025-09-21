@@ -1,0 +1,59 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="1000" fill="#ffffff"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="120" fill="#6d28d9"/>
+  <text x="40" y="70" font-family="Arial" font-size="40" font-weight="bold" fill="#ffffff">Soumodip Das</text>
+  <text x="40" y="100" font-family="Arial" font-size="20" fill="#ffffff">Python Developer | ML Enthusiast | Full-Stack Coder</text>
+  
+  <!-- Contact Info -->
+  <text x="600" y="50" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="end">soumo.das2004@gmail.com</text>
+  <text x="600" y="70" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="end">Kolkata, West Bengal</text>
+  <text x="600" y="90" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="end">github.com/Soumodip04</text>
+  <text x="600" y="110" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="end">linkedin.com/in/imsoumodipdas</text>
+  
+  <!-- Education Section -->
+  <text x="40" y="160" font-family="Arial" font-size="24" font-weight="bold" fill="#333333">Education</text>
+  <line x1="40" y1="170" x2="760" y2="170" stroke="#6d28d9" stroke-width="2"/>
+  
+  <text x="40" y="200" font-family="Arial" font-size="18" font-weight="bold" fill="#333333">B.Tech in Computer Science (AI & ML)</text>
+  <text x="40" y="225" font-family="Arial" font-size="16" fill="#666666">Techno Engineering College, Banipur</text>
+  <text x="40" y="250" font-family="Arial" font-size="16" fill="#666666">2022 - 2026</text>
+  
+  <text x="40" y="280" font-family="Arial" font-size="18" font-weight="bold" fill="#333333">ISC (Class XII)</text>
+  <text x="40" y="305" font-family="Arial" font-size="16" fill="#666666">85.8%</text>
+  
+  <text x="40" y="335" font-family="Arial" font-size="18" font-weight="bold" fill="#333333">ICSE (Class X)</text>
+  <text x="40" y="360" font-family="Arial" font-size="16" fill="#666666">82.5%</text>
+  
+  <!-- Experience Section -->
+  <text x="40" y="410" font-family="Arial" font-size="24" font-weight="bold" fill="#333333">Experience</text>
+  <line x1="40" y1="420" x2="760" y2="420" stroke="#6d28d9" stroke-width="2"/>
+  
+  <text x="40" y="450" font-family="Arial" font-size="18" font-weight="bold" fill="#333333">Open Source Contributor</text>
+  <text x="40" y="475" font-family="Arial" font-size="16" fill="#666666">GSSOC'24</text>
+  <text x="40" y="500" font-family="Arial" font-size="16" fill="#666666">2024 - Present</text>
+  <text x="40" y="525" font-family="Arial" font-size="14" fill="#666666">• Contributing to open source projects as part of GirlScript Summer of Code 2024</text>
+  
+  <text x="40" y="555" font-family="Arial" font-size="18" font-weight="bold" fill="#333333">Web Development Intern</text>
+  <text x="40" y="580" font-family="Arial" font-size="16" fill="#666666">Bharat Intern</text>
+  <text x="40" y="605" font-family="Arial" font-size="16" fill="#666666">2023</text>
+  <text x="40" y="630" font-family="Arial" font-size="14" fill="#666666">• Developed responsive web applications using modern technologies</text>
+  <text x="40" y="655" font-family="Arial" font-size="14" fill="#666666">• Collaborated with team members to implement new features</text>
+  
+  <text x="40" y="685" font-family="Arial" font-size="18" font-weight="bold" fill="#333333">Python Development Intern</text>
+  <text x="40" y="710" font-family="Arial" font-size="16" fill="#666666">Oasis Infobyte</text>
+  <text x="40" y="735" font-family="Arial" font-size="16" fill="#666666">2023</text>
+  <text x="40" y="760" font-family="Arial" font-size="14" fill="#666666">• Built Python applications and scripts for various business needs</text>
+  <text x="40" y="785" font-family="Arial" font-size="14" fill="#666666">• Implemented data processing and analysis solutions</text>
+  
+  <!-- Skills Section -->
+  <text x="40" y="835" font-family="Arial" font-size="24" font-weight="bold" fill="#333333">Skills</text>
+  <line x1="40" y1="845" x2="760" y2="845" stroke="#6d28d9" stroke-width="2"/>
+  
+  <text x="40" y="875" font-family="Arial" font-size="16" fill="#666666">• Python, Java, C, JavaScript, HTML/CSS</text>
+  <text x="40" y="900" font-family="Arial" font-size="16" fill="#666666">• Machine Learning, Data Structures & Algorithms</text>
+  <text x="40" y="925" font-family="Arial" font-size="16" fill="#666666">• React, Node.js, Express, MongoDB, MySQL</text>
+  <text x="40" y="950" font-family="Arial" font-size="16" fill="#666666">• Git, Tailwind CSS, Problem Solving</text>
+</svg>
